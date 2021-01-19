@@ -1,13 +1,143 @@
 body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* style for JoinBlock component */
+.wrapper {
+  margin: 50px auto;
+  width: 500px;
+}
+
+.join-block > input {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.join-block__btn {
+  display: block;
+  width: 275px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #23fa02;
+  border-radius: 4px;
+}
+
+/* style for Chat component */
+.chat-block {
+  color: #383307;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 700px;
+}
+
+.chat-block__users {
+  background-color: #72fc5d;
+  border-radius: 10px;
+  flex: 0.3;
+  height: 500px;
+}
+.chat-block__users > div {
+  border-bottom: 2px solid #383307;
+}
+
+.chat-block__users h2 {
+  margin: 10px;
+  display: inline-block;
+}
+
+.chat-block__users li {
+  list-style-type: none;
+}
+
+.chat-block__messages {
+  border-radius: 10px;
+  flex: 0.7;
+  height: 500px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.messages {
+  height: 400px;
+  padding: 10px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.messages::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.message {
+  position: relative;
+}
+
+.message__text {
+  padding: 15px 5px 5px 5px;
+  margin: 15px;
+  background-color: #72fc5d;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.message__user {
+  position: absolute;
+  top: 3px;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 3px;
+  text-align: left;
+  background-color: #8abe83;
+}
+
+.form__text {
+  width: 100%;
+  resize: none;
+  padding: 5px;
+}
+
+.send__btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #23fa02;
+  border-radius: 4px;
+  color: #383307;
+  text-transform: uppercase;
 }
